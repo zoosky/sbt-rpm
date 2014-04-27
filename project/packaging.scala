@@ -9,7 +9,8 @@ object Packaging {
 	name in Rpm := "helloworld",
 	version in Rpm := "" + new java.util.Date().getTime,
 	packageSummary in Linux := "Helloworld Package",
-	rpmRelease := "1",
+	packageDescription := "Some PKG Description",
+  rpmRelease := "1",
 	rpmVendor := "Frank Ittermann",
 	rpmRequirements ++= Seq("chkconfig", "java-1.7.0-openjdk-devel >= 1:1.7", "apache-tomcat >= 7.0"),
 	rpmPost := Option("""service tomcat stop
