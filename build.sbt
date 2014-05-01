@@ -1,4 +1,6 @@
 
+import NativePackagerKeys._
+
 name :="sbt-rpm"
 
 scalaVersion :="2.10.2"
@@ -12,4 +14,8 @@ libraryDependencies ++= Seq(
     "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container,compile" artifacts Artifact("javax.servlet", "jar", "jar")
 )
 
+
+
 Packaging.settings
+
+rpmBrpJavaRepackJars := true
